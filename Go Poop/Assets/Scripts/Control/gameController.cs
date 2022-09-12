@@ -14,6 +14,15 @@ public class gameController : MonoBehaviour
 
     private InputActions _input;
 
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+
     private void Pause()
     {
         Time.timeScale = 0f;
