@@ -392,6 +392,8 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -498,6 +500,84 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e2f0c58775c8d4d8ea11cb775cfb4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfCam: {fileID: 330585545}
+  target: {fileID: 1818138054}
+  OriginOffset: {x: 0, y: 0, z: 0}
+  orbitAngle: 0.5
+  orbitRadius: 2
+  orbitPos: {x: -0.07018159, y: -0.47901726, z: -0.8749954}
+  orbitVelScaler: 0.01
+  firstPerson: 0
+  thirdPerson: 1
+  orbitMode: 1
+  lockedMode: 0
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1360f20aeadfbb0449925de39aa26b7e,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb37efd3-0b91-4ff1-bed7-c690fd308bb6
+    m_ActionName: dog/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 330585548}
+        m_TargetAssemblyTypeName: multiCam, Assembly-CSharp
+        m_MethodName: cameraLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ba33d8ad-87b6-4b50-8032-6bf4f6b4602c
+    m_ActionName: dog/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb3580b8-9f54-4bd6-a979-7c41631b7be6
+    m_ActionName: menu/Pause[/Keyboard/escape]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: dog
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &335873842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398440727}
   - component: {fileID: 1398440726}
+  - component: {fileID: 1398440728}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2844,6 +2925,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398440728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398440725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1360f20aeadfbb0449925de39aa26b7e,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb37efd3-0b91-4ff1-bed7-c690fd308bb6
+    m_ActionName: dog/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba33d8ad-87b6-4b50-8032-6bf4f6b4602c
+    m_ActionName: dog/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1398440726}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: PauseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eb3580b8-9f54-4bd6-a979-7c41631b7be6
+    m_ActionName: menu/Pause[/Keyboard/escape]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: menu
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1444290055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,6 +3776,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704610440}
   m_CullTransparentMesh: 1
+--- !u!1 &1818138054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8575640577754424850, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011301372455783388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010541897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,6 +4200,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97574302037135405, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_RootOrder
@@ -4081,22 +4228,22 @@ PrefabInstance:
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000014901159
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
@@ -4106,7 +4253,7 @@ PrefabInstance:
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}

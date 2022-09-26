@@ -12,7 +12,6 @@ public class gameController : MonoBehaviour
     private bool        pausedD;
     public float        defaultTimeSpeed = 1f;
 
-    private InputActions _input;
 
     public void QuitGame()
     {
@@ -33,7 +32,7 @@ public class gameController : MonoBehaviour
         Time.timeScale = defaultTimeSpeed;
     }
 
-    private void PauseInput(InputAction.CallbackContext ctx)
+    public void PauseInput(InputAction.CallbackContext ctx)
     {
         pauseWindow.SetActive(true);
     }
@@ -54,21 +53,6 @@ public class gameController : MonoBehaviour
         }
     }
 
-
-    private void OnEnable()
-    {
-        _input = new InputActions();
-        _input.menu.Enable();
-
-        _input.menu.Pause.started += PauseInput;
-    }
-
-    private void OnDisable()
-    {
-        _input.menu.Pause.started -= PauseInput;
-
-        _input.menu.Disable();
-    }
 
     // Start is called before the first frame update
     void Start()
