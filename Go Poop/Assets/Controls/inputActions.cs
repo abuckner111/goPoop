@@ -44,6 +44,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": ""ScaleVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Value"",
+                    ""id"": ""a68b0215-a1e6-4e2a-bfb4-6de2b40c0aeb"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": ""Clamp(max=1)"",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -189,6 +198,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d0e212d-4376-4f5c-b6b3-795812bb725d"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -227,6 +247,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_dog = asset.FindActionMap("dog", throwIfNotFound: true);
         m_dog_Move = m_dog.FindAction("Move", throwIfNotFound: true);
         m_dog_Look = m_dog.FindAction("Look", throwIfNotFound: true);
+        m_dog_Sprint = m_dog.FindAction("Sprint", throwIfNotFound: true);
         // menu
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_Pause = m_menu.FindAction("Pause", throwIfNotFound: true);
@@ -291,12 +312,14 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private IDogActions m_DogActionsCallbackInterface;
     private readonly InputAction m_dog_Move;
     private readonly InputAction m_dog_Look;
+    private readonly InputAction m_dog_Sprint;
     public struct DogActions
     {
         private @InputActions m_Wrapper;
         public DogActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_dog_Move;
         public InputAction @Look => m_Wrapper.m_dog_Look;
+        public InputAction @Sprint => m_Wrapper.m_dog_Sprint;
         public InputActionMap Get() { return m_Wrapper.m_dog; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -312,6 +335,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Look.started -= m_Wrapper.m_DogActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_DogActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_DogActionsCallbackInterface.OnLook;
+                @Sprint.started -= m_Wrapper.m_DogActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_DogActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_DogActionsCallbackInterface.OnSprint;
             }
             m_Wrapper.m_DogActionsCallbackInterface = instance;
             if (instance != null)
@@ -322,6 +348,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Sprint.started += instance.OnSprint;
+                @Sprint.performed += instance.OnSprint;
+                @Sprint.canceled += instance.OnSprint;
             }
         }
     }
@@ -363,6 +392,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
