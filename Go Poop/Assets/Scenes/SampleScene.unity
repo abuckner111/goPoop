@@ -3782,6 +3782,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1011301372455783388}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1818138058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3790318673697686767, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011301372455783388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818138054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b3ac93224cbac48a44755914d5cdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1818138059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011301372455783388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010541897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,6 +4223,116 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: a68b0215-a1e6-4e2a-bfb4-6de2b40c0aeb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: c7cfe703-adf6-4303-ac93-bbcd479939c1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: dog/Sprint[/Keyboard/leftShift]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: dog/Jump[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1818138058}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1818138058}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSprint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dogController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dogController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296430294399189943, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790318673697686767, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: pos
+      value: 
+      objectReference: {fileID: 1818138059}
+    - target: {fileID: 3790318673697686767, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 330585546}
+    - target: {fileID: 3790318673697686767, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
+        type: 3}
+      propertyPath: cameraPos
+      value: 
+      objectReference: {fileID: 330585546}
     - target: {fileID: 5052952272146248053, guid: 3bb79f027093e7b4a821ed37fd9f9be3,
         type: 3}
       propertyPath: m_RootOrder
